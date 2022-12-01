@@ -1,0 +1,31 @@
+{
+  "contact": [
+    {
+      "nom": "jjj",
+      "datedenais": "2022-11-05",
+      "tel": "dddd",
+      "email": "mmm",
+      "sexe": "homme",
+      "adresse": "gggg",
+      "id": 1
+    },
+    {
+      "nom": "ggg",
+      "datedenais": "2022-11-05",
+      "tel": "aaa",
+      "email": "fff",
+      "sexe": "Femme",
+      "adresse": "dd",
+      "id": 2
+    },
+    {
+      "nom": "ss",
+      "datedenais": "2022-12-03",
+      "tel": "ss",
+      "email": "sss",
+      "sexe": "Femme",
+      "adresse": "ssss",
+      "id": 3
+    }
+  ]
+}

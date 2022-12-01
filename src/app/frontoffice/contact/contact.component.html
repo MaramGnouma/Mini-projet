@@ -1,0 +1,33 @@
+
+<div class="container" style="margin-top: 120px;">
+    <div class="contact-box">
+        <div class="left">
+            <img src="./assets/contaaaaaaaaaaaaaacctt.avif" alt="">
+        </div>
+        <div class="right">
+        <h2>contact us!</h2>
+         <form [formGroup]="inscrireForm"  (ngSubmit)="ajouterctc()" >
+                
+                    <input class="form-control" type="text" formControlName="nom" placeholder="Votre Nom"> <br>
+                    <input class="form-control" type="date" formControlName="datedenais" placeholder="Votre Date de naissance"> <br>
+                    <input class="form-control" type="text" formControlName="adresse" placeholder="Votre Adresse"> <br>
+                    <input class="form-control" type="text" formControlName="tel" placeholder="Votre Téléphone"> <br>
+                    <input class="form-control" type="text" formControlName="email" placeholder="Votre Mail"> <br>
+                <div>
+                    <label> sexe:</label>  <br>
+                    <input type="radio" formControlName="sexe" value="Femme"> femme
+                    <input type="radio" formControlName="sexe" value="homme"> homme
+
+                </div>
+                
+                <div>
+                    <button class="btn" >Send</button> <br> <br>
+                    <button  type="reset"   class="btn " (click)="onReset()">  reinisialier  </button>
+                    <h5 class="homeee"> <a class="nav-link" routerLinkActive="active" routerLink="/accueil"> Home </a> </h5>
+                </div>
+                
+        </form>
+        </div>
+        </div>
+        </div>
+        

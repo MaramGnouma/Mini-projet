@@ -1,0 +1,158 @@
+
+<div>
+    <div class=" acc"  style="margin-top: 100px;">
+        <div>
+            <img class="font" src="assets/animals/home1.jpg" alt="">
+        </div>
+        
+        <div class="hometext">
+            <h1><span>Pet</span> care <br> with <span>love</span></h1>
+            <p>A pet , or companion animal is an animal kept <br> primarily  for a person’s company or <br>
+                 entertainment rather
+                than as a working animal.</p>
+                <button routerLinkActive="active" routerLink="/adopt" class="boutton">Discover More</button>
+        </div>
+    </div>
+    
+    <div class="about">
+        <img class="aboutimg" src="assets/animals/home2.png" alt="">
+        <div class="textabout">
+            <h1>About Us</h1>
+            <p>we offer high-class care services and activities for your pets .no matter what accomodation type you
+                choose your pet will always receive preminum meals and daily exsercises and some events during the year,
+                In store, our teams are at your disposal to provide you with the best advice to take care of your
+                animals. But they are also present to accompany you in all the steps of a successful adoption.
+                Petsy also offers many accessories dedicated to pets and their needs
+            </p>
+            <button routerLinkActive="active" routerLink="/aboutus" class="boutton">Read more</button>
+        </div>
+    </div>
+    
+    <div class="section2">
+        <h1 class="titlefeedback">What Our <span style="color: #301B3F;">Customers</span> Says About Us</h1>
+        <div class="feedbacks">
+            <div class="feedback">
+                <div class="userphoto"><img src="assets/animals/user1.png" alt="">
+                    <h1 class="datarating">3.7</h1>
+                </div>
+                <h2 class="titlefeed">best quality more than my expectation</h2>
+                <h6 class="review">Thank you so much for connecting us with you and for our adoption of LIANA .LIANA is an intelligent, beautiful and fun dog .You did a great thing in saving Liana and giving her a new home with loveing family .That would be us.
+                    We love LIANA so much</h6>
+            </div>
+            <div class="feedback">
+                <div class="userphoto"><img src="assets/animals/user2.png" alt="">
+                    <h1 class="datarating">4.9</h1>
+                </div>
+                <h2 class="titlefeed">on time delivery with best packaging</h2>
+                <h6 class="review">I just wanted to thank you for this site We have had Bienca since she was a baby! Bienca seems to be the best thing that is going to happen to us .Her family will give her all she nedds , love and attention. I would recommend 
+                    thank youu again for everything
+                    </h6>
+            </div>
+            <div class="feedback">
+                <div class="userphoto"><img src="assets/animals/user3.png" alt="">
+                    <h1 class="datarating">4.1</h1>
+                </div>
+                <h2 class="titlefeed">very helpful customer support</h2>
+                <h6 class="review">Milo  is a sweet little guy.He smilles all the time.I don't think the transition has been hard on him at all . I am just in love with this little guy.we have a few issues to work through, but i think he will settle in with a little more time as weel </h6>
+            </div>
+           
+        </div>
+    </div>
+    
+    <!-- commentaire ajouter -->
+    <div *ngIf="aff==true" class="comajouter">
+        <div class="feedback">
+            <div class="userphoto"><img src="assets/animals/user1.png" alt="">
+                <h1 class="datarating">3.7</h1>
+            </div>
+            <h2 class="titlefeed">a</h2>
+            <h6 class="review">Thank you so much for connecting us with you and for our adoption of LIANA .LIANA is an intelligent, beautiful and fun dog .You did a great thing in saving Liana and giving her a new home with loveing family .That would be us.
+                We love LIANA so much</h6>
+        </div>
+    </div>
+    
+    <div class="com">
+        
+        <form [formGroup]="commentForm">
+        <div class="col-md-4 mb-3">
+            <label for="validationTooltipUsername">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+              </div>
+              <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required
+              formControlName="id">
+              <div class="invalid-tooltip">
+                Please choose a unique and valid username.
+              </div>
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label for="formGroupExampleInput">donner titre a votre commentaire</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="titre"
+            formControlName="titre">
+          </div>
+        
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Ajouter un commentaire</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="10"
+            formControlName="titre"></textarea>
+          </div>
+    <button class="boutton" (click)="onAfficher()">Ajouter un commentaire</button>
+    <button class="boutton" (click)="onVider()">Vider</button>
+    <div style="padding-bottom: 50px;"> 
+    </div>
+    </form>
+    </div>
+    </div>
+    
+    <div style="display: flex; justify-self: unset;padding-left: 600px;padding-top: 50px; background-color: beige;">
+        <img src="assets/logo11.png" width="90" height="70" style=" background-color: beige;"/>
+        <h2 style=" background-color: beige;">Nouveaux Accessoires</h2>
+    </div>
+    <div class="images back">
+    
+    <!---
+        <div class="imaget" *ngFor="let pr of Alim">
+            <div><img [src]="pr.photo" class="card-img-top p-2" width="250" height="200"></div>
+            <div style="margin-left: 20px;">
+                <h3 class="producttitle">{{pr.libelle}}</h3>
+    
+                <i class="fa fa-star" style="color: orange; width:11;"></i>
+                <i class="fa fa-star" style="color: orange;;"></i>
+                <i class="fa fa-star" style="color: black;"></i>
+                <i class="fa fa-star" style="color: black;"></i>
+                <i class="fa fa-star" style="color: black;"></i>
+                <br>
+                <div class="pricee"> Prix:<span class="price">{{pr.prix}}</span>DT </div>
+                <span class="badge text-bg-secondary" *ngIf="pr.disponible==true">Disponible</span> 
+                      <span class="badge text-bg-secondary m-4">Commander</span> <br> <br> 
+                      <button type="button" class="btn btn-primary" [routerLink]="['/accueil',pr.id]" style="background-color: blue"> Détail 
+                          </button>
+            </div>
+        </div>-->
+        <div class="imaget" *ngFor="let p of lesProduits">
+            <div><img [src]="p.photo" class="card-img-top p-2" width="250" height="200"></div>
+            <div style="margin-left: 20px;">
+                <h3 class="producttitle">{{p.libelle}}</h3>
+    
+                <i class="fa fa-star" style="color: orange; width:11;"></i>
+                <i class="fa fa-star" style="color: orange;;"></i>
+                <i class="fa fa-star" style="color: black;"></i>
+                <i class="fa fa-star" style="color: black;"></i>
+                <i class="fa fa-star" style="color: black;"></i>
+                <br>
+                <div class="pricee"> Prix:<span class="price">{{p.prix}}</span>DT </div>
+                <span class="badge text-bg-secondary" *ngIf="p.disponible==true">Disponible</span> 
+                      <span class="badge text-bg-secondary m-4">Commander</span> <br> <br> 
+                      <button type="button" class="btn btn-primary" [routerLink]="['/accueil', p.id]" style="background-color: blue"> Détail 
+                          </button>
+                          <button type="button" class="btn btn-primary" style="margin-left:5px" [routerLink]="['/panier']" style="background-color: blue" >Add to panier
+                        </button>
+            </div>
+        </div>
+        </div>
+    
+        
+    

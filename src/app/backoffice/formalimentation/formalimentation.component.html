@@ -1,0 +1,17 @@
+<h1>Ajouter une alimentation</h1>
+<div class="form-style-3 ">
+    <form [formGroup]="prodForm" (ngSubmit)="Ajouter()">
+    <fieldset><legend>Alimentation</legend>
+    <label for="field2"><span>Libelle </span><input type="text" formControlName="libelle" class="input-field"/></label>
+    <label for="field3"><span>Prix </span><input type="number" formControlName="prix" class="input-field"/></label>
+    <label for="field4"><span>Date Fabriquation </span><input type="text" formControlName="datefabriquation" class="input-field"/></label>
+    <label for="field5"><span>Date Fin </span><input type="text" formControlName="datefin" class="input-field"/></label>
+    <label for="field5"><span>Image</span><input type="text" formControlName="photo" class="input-field"/></label>
+   <!--- <label for="field8"><span>Disponible </span><input type="checkbox" formControlName="disponible" class="input-field"/></label>-->
+    <br>
+    <button  type="submit"><i class="fa-regular fa-octagon-plus"></i> Ajouter</button>
+    <button type="button" [routerLink]="['/liste']">Retour</button>
+    </fieldset>
+    {{message}}
+    </form>
+    </div>

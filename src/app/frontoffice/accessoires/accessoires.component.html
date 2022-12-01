@@ -1,0 +1,45 @@
+<div class="container" style="margin-top: 120px;">
+    <div class="bloc1">
+            <h3 class="title" style="text-align:center; padding-left: 22px;color: #b96662;">Nos Accessoires</h3>
+    </div>
+  
+    <br>
+    <div class="row" *ngIf="!load"> 
+     
+        <div *ngFor="let p of lesProduits"  class="col-sm-4">
+          <div class="card box imaget" style="width: 18rem;">
+              <img [src]="p.photo" class="card-img-top p-2" alt="..." height="250px" width="900px">
+              <div class="card-body">
+                      <h5 class="card-title">{{p.libelle}}</h5>
+                      <i class="fa fa-star" style="color: orange; width:11;"></i>
+                              <i class="fa fa-star" style="color: orange;;"></i>
+                              <i class="fa fa-star" style="color: orange;"></i>
+                              <i class="fa fa-star" style="color: orange;"></i>
+                              <i class="fa fa-star" style="color: black;"></i>
+                              <br>
+                      <p class="card-text">Prix:{{p.prix| number:'.3'|money}}</p>
+                      <span class="badge text-bg-secondary" *ngIf="p.disponible==true">Disponible</span> 
+                       <a class="badge text-bg-secondary m-4" [routerLink]="['/contact']"> Commander</a> 
+                       
+                        <br> <br> 
+                      <div>
+                          <button type="button" class="btn btn-primary mr-5" [routerLink]="['/produits', p.id]" > Détail 
+                          </button> 
+                          <button type="button" class="btn btn-primary" style="margin-left:5px" routerLink="/cart" >Ajouter au panier
+                          </button>
+                      </div>
+                  </div>
+              </div>
+            <br>
+              </div>
+                 
+      </div>
+<div class="d-flex justify-content-center">
+    <button  class="boutton"><a class="nav-link" routerLinkActive="active" routerLink="/shop">Page précidente</a></button>
+</div>
+</div>
+
+
+
+
+

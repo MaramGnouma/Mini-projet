@@ -1,0 +1,23 @@
+.bloc1{
+    display: flex;
+}
+.bloc2{
+    text-align: center;
+    
+}
+.boutton{
+    padding: 10px;
+    background-color:#b96662;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.boutton:hover
+{
+    background: #2b201a;
+}
+.bloc2{
+    display: flex;
+    justify-content: space-evenly;
+}
